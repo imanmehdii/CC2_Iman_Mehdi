@@ -36,10 +36,13 @@ public class MyDataClimat extends SQLiteOpenHelper {
 
     public static long AddClimat(SQLiteDatabase sql, Climat e){
         ContentValues c = new ContentValues();
-        c.put(COL2,p.getVille());
-        c.put(COL3,p.getPays());
-        c.put(COL4,p.getTemperature());
-        c.put(COL5,p.getPourcNuage());
+        c.put(COL2,e.getNom_ville());
+        c.put(COL3,e.getPays());
+        c.put(COL4,e.getTemperature());
+        c.put(COL5,e.getPourcentage());
         return sql.insert(TABLE_NAME,null,c);
     }
+
+
+
 }
